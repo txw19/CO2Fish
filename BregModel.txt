@@ -1,0 +1,24 @@
+
+model {
+    
+for(i in 1:n){
+    y[i] ~ dbeta(a[i],b[i])
+    a[i] <- mu[i] * phi
+    b[i] <- ((1-mu[i]) * phi)
+    logit(mu[i]) <- group.mean[trt1[i], trt2[i]]
+}
+    
+    # Priors
+for(i in 1:ntrt1){
+	for(j in 1:ntrt2){
+  group.mean[i,j]~dnorm(0,0.001)
+  }
+}
+
+
+    phi ~ dgamma(0.1, 0.1)  
+
+    
+} # end model
+
+
