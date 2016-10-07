@@ -7,7 +7,7 @@ head(dat)
 summary(dat)
 dim(dat)
 
-levels(dat$ACC_CO2)
+# levels(dat$ACC_CO2)
 levels(dat$EXP_CO2)
 
 # Convert factors to numeric vectors
@@ -99,7 +99,7 @@ print(out, dig = 3)
 # # Ouptut order
 # ACC_CO2control:EXP_CO2control  [1,1]
 # ACC_CO2high:EXP_CO2control     [2,1]
-# ACC_CO2low:EXP_CO2control      [3,2]
+# ACC_CO2low:EXP_CO2control      [3,1]
 # ACC_CO2control:EXP_CO2high     [1,2]
 # ACC_CO2high:EXP_CO2high        [2,2]
 # ACC_CO2low:EXP_CO2high         [3,2]
